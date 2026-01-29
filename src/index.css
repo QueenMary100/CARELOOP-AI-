@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CARELOOP AI Design System
+   A calm, empathetic wellness app with organic, soothing aesthetics
+   Inspired by meditation apps - soft, warm, and globally inclusive
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core Colors - Vibrant Sage Green Palette */
+    --background: 140 25% 97%;
+    --foreground: 150 20% 15%;
+
+    --card: 140 20% 95%;
+    --card-foreground: 150 20% 15%;
+
+    --popover: 140 20% 95%;
+    --popover-foreground: 150 20% 15%;
+
+    /* Primary - Vibrant Sage Green */
+    --primary: 152 45% 42%;
+    --primary-foreground: 140 25% 98%;
+
+    /* Secondary - Soft Mint */
+    --secondary: 145 30% 88%;
+    --secondary-foreground: 150 25% 20%;
+
+    /* Muted - Cool sage neutrals */
+    --muted: 145 15% 90%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Accent - Forest Green */
+    --accent: 158 50% 55%;
+    --accent-foreground: 140 25% 98%;
+
+    /* Wellness states */
+    --wellness-calm: 152 50% 48%;
+    --wellness-caution: 45 80% 55%;
+    --wellness-care: 350 60% 60%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 140 25% 98%;
+
+    --border: 145 20% 85%;
+    --input: 145 20% 85%;
+    --ring: 152 45% 42%;
+
+    --radius: 1rem;
+
+    /* Gradients - Fresh green tones */
+    --gradient-hero: linear-gradient(135deg, hsl(152 35% 92%) 0%, hsl(145 30% 94%) 50%, hsl(140 25% 96%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(145 20% 97%) 0%, hsl(152 25% 95%) 100%);
+    --gradient-calm: linear-gradient(135deg, hsl(152 40% 85%) 0%, hsl(158 35% 88%) 100%);
+    --gradient-warmth: linear-gradient(135deg, hsl(145 35% 90%) 0%, hsl(152 40% 88%) 100%);
+    --gradient-sunrise: linear-gradient(180deg, hsl(145 30% 94%) 0%, hsl(152 35% 92%) 100%);
+
+    /* Shadows - Sage tinted */
+    --shadow-soft: 0 4px 20px -4px hsl(152 30% 25% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(152 30% 25% / 0.1);
+    --shadow-elevated: 0 16px 50px -12px hsl(152 30% 25% / 0.15);
+    --shadow-glow: 0 0 40px -10px hsl(152 50% 48% / 0.35);
+
+    /* Sidebar */
+    --sidebar-background: 145 20% 95%;
+    --sidebar-foreground: 150 20% 20%;
+    --sidebar-primary: 152 45% 42%;
+    --sidebar-primary-foreground: 140 25% 98%;
+    --sidebar-accent: 152 30% 88%;
+    --sidebar-accent-foreground: 150 20% 20%;
+    --sidebar-border: 145 20% 85%;
+    --sidebar-ring: 152 45% 42%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 145 15% 95%;
+
+    --card: 150 18% 12%;
+    --card-foreground: 145 15% 95%;
+
+    --popover: 150 18% 12%;
+    --popover-foreground: 145 15% 95%;
+
+    --primary: 152 50% 55%;
+    --primary-foreground: 150 20% 8%;
+
+    --secondary: 150 15% 16%;
+    --secondary-foreground: 145 15% 90%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 145 10% 60%;
+
+    --accent: 158 45% 50%;
+    --accent-foreground: 150 20% 8%;
+
+    --wellness-calm: 152 55% 55%;
+    --wellness-caution: 45 70% 55%;
+    --wellness-care: 350 55% 58%;
+
+    --destructive: 0 60% 48%;
+    --destructive-foreground: 145 15% 95%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 152 50% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(150 20% 10%) 0%, hsl(152 18% 12%) 50%, hsl(148 15% 11%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(150 18% 13%) 0%, hsl(152 15% 12%) 100%);
+    --gradient-calm: linear-gradient(135deg, hsl(152 30% 18%) 0%, hsl(158 25% 16%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(150 30% 5% / 0.4);
+    --shadow-card: 0 8px 30px -8px hsl(150 30% 5% / 0.5);
+
+    --sidebar-background: 150 18% 10%;
+    --sidebar-foreground: 145 15% 90%;
+    --sidebar-primary: 152 50% 55%;
+    --sidebar-primary-foreground: 150 20% 8%;
+    --sidebar-accent: 150 15% 16%;
+    --sidebar-accent-foreground: 145 15% 90%;
+    --sidebar-border: 150 15% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-calm {
+    background: var(--gradient-calm);
+  }
+
+  .gradient-warmth {
+    background: var(--gradient-warmth);
+  }
+
+  .gradient-sunrise {
+    background: var(--gradient-sunrise);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Wellness state utilities */
+  .wellness-calm {
+    color: hsl(var(--wellness-calm));
+  }
+
+  .wellness-caution {
+    color: hsl(var(--wellness-caution));
+  }
+
+  .wellness-care {
+    color: hsl(var(--wellness-care));
+  }
+
+  .bg-wellness-calm {
+    background-color: hsl(var(--wellness-calm) / 0.15);
+  }
+
+  .bg-wellness-caution {
+    background-color: hsl(var(--wellness-caution) / 0.15);
+  }
+
+  .bg-wellness-care {
+    background-color: hsl(var(--wellness-care) / 0.15);
+  }
+
+  /* Breathing animation for wellness elements */
+  .breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+
+  /* Gentle pulse for interactive elements */
+  .pulse-gentle {
+    animation: pulseGentle 3s ease-in-out infinite;
+  }
+
+  @keyframes pulseGentle {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 12px hsl(var(--primary) / 0);
+    }
+  }
+
+  /* Float animation for decorative elements */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
