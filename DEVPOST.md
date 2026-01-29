@@ -17,16 +17,23 @@ Tech stack:
 - AI: Prompt-based lightweight scoring (or small model)
 
 Demo link:
-- (paste your deployed demo URL here)
+- (https://youtu.be/xLnJuxt7VoE)
 
 Video link:
-- (paste your recorded demo)
+- https://youtu.be/xLnJuxt7VoE
 
 Team:
-- Name — role (GitHub handle/email)
+- Mary Syokau — Software developer
+-Christiner Wambua- Marketing Lead
 
 Screenshots & Notes:
-- Add 3 screenshots that match the demo flow.
+<img width="1346" height="637" alt="image" src="https://github.com/user-attachments/assets/47849177-9446-445a-83de-8af1b47c9ed7" />
+<img width="1355" height="628" alt="image" src="https://github.com/user-attachments/assets/4947ee6e-a39e-43f5-ac18-21ba954cf716" />
+<img width="1365" height="641" alt="image" src="https://github.com/user-attachments/assets/c690d305-0b63-439d-b472-a742d80d7abd" />
+<img width="1357" height="649" alt="image" src="https://github.com/user-attachments/assets/0675d00d-a3b1-4966-8427-226ca9143b88" />
+
+
+
 
 Roadmap / next steps:
 - Improve personalized advice, expand analytics, localization, partnerships with providers.
