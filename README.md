@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# CareLoop_Ai ❄️
 
-## Project info
+**Elevator pitch**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+CareLoop_Ai is an AI-powered daily wellbeing check-in that helps people who fall through care gaps notice trends early and take action. In ~2 minutes per day users complete 3–5 adaptive text/voice prompts; AI surfaces risk signals (stress, burnout, depressive patterns), generates empathetic next steps, and optionally notifies trusted contacts while preserving privacy.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Why this will win Snow Fest 🏆
 
-**Use Lovable**
+- **Clarity of the problem:** Targets a clear, urgent gap—people who don’t get timely mental/behavioral support.
+- **Innovation:** Lightweight, adaptive check-ins + simple explainable AI signals (not overcomplicated ML). Practical integrations (voice, alerts, family circle) increase differentiation.
+- **Impact & Scalability:** Globally relevant, low friction, easy localisation and onboarding.
+- **Execution quality:** Demoable end-to-end flow (daily check-in → insight → history → optional alert).
+- **Storytelling:** Human story + data-driven impact (show a user who avoided escalation because they caught the pattern early).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Strategic direction (final pick)
 
-**Use your preferred IDE**
+We recommend shipping the **CARELOOP AI** MVP focusing on: simple daily check-ins, lightweight AI analysis, time-series pattern detection, shareable alerts (opt‑in), and a clear demo flow. This hits judge priorities: impact, clarity, and a high-quality, demoable execution.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 3‑Day Sprint Plan (sharp, practical) ⚡
 
-Follow these steps:
+Day 0 (planning — 0.5 day)
+- Finalize MVP scope & acceptance criteria (who is primary user, success metrics).
+- Assign roles: frontend, backend, AI, demo/story.
+- Create issues for each task in repo.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Day 1 (MVP core)
+- Implement check-in flow (3–5 adaptive Qs) — UI + minimal validation.
+- Wire basic AI scoring: heuristic or lightweight prompt + small model for signal detection.
+- Persist responses and show simple timeline.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Day 2 (polish + integrations)
+- Add voice input option and quick analytics (pattern highlight).
+- Implement optional trusted-contact alert (email / simulated flow).
+- UX polish: animations, pricing/plan stub, and deploy preview.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Day 3 (demo + submission)
+- Record 3–5 minute video (script below).
+- Final deploy (Vercel/Netlify), make sure demo link works.
+- Complete Devpost submission, final copy, screenshots, and push last fixes.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## MVP feature checklist ✅
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- [ ] 3–5 adaptive text questions (mobile-friendly)
+- [ ] Optional voice check-ins (record → transcribe)
+- [ ] Lightweight AI scoring (risk flags + short human-friendly advice)
+- [ ] History & simple charts (7–30 day timeline)
+- [ ] Opt‑in trusted contact alerts (privacy-preserving)
+- [ ] Clean landing + pricing (demo-focused)
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Demo flow (3 minutes) 🎬
 
-## What technologies are used for this project?
+1. Short problem hook (20s): real human story + scope.
+2. Show 1-minute quick onboarding and daily check-in.
+3. Trigger an alert / show pattern detection (the value reveal).
+4. Show history and a single controlled `what-if` (explain why it matters).
+5. Quick deploy/scale note and call-to-action (“Why this needs funding / adoption”).
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Devpost Submission Checklist 📋
 
-## How can I deploy this project?
+- [ ] GitHub repo link (this repo)
+- [ ] Hosted demo link (Vercel / Netlify / static preview)
+- [ ] 3–5 minute video demo (screen + walk-through + 20s pitch)
+- [ ] Short project description (problem, solution, why it matters)
+- [ ] Technology stack details and any APIs or frameworks used
+- [ ] Team information: Names, roles, and contact details
+- [ ] (Optional) Supplementary materials like UI/UX mockups, business models, or presentation slides
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## Quick run & dev notes 🔧
 
-Yes, you can!
+- Install: `npm install`
+- Dev: `npm run dev`
+- Build: `npm run build`
+- Preview: `npm run preview`
+- Tests: `npm run test`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Environment notes
+- Add all secret keys to a local `.env` (already ignored). If using Supabase or external APIs, add `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` to `.env`.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## What I added right away ✨
+- `/.env.example` with placeholder environment variables
+- `/.github/workflows/ci.yml` basic CI to install, build, and test
+- `VIDEO_SCRIPT.md` with a ready-to-record 3–5 minute demo script
+- `DEVPOST.md` with a suggested submission write-up and checklist
+- `ISSUES.md` with a prioritized task list for the 3‑day sprint
+
+---
+
+## Suggested immediate follow-ups (pick any)
+- Create a short 3–5 minute recording using `VIDEO_SCRIPT.md`.
+- Add the project to Vercel/Netlify and paste the demo link into `DEVPOST.md`.
+- Open the top-priority issues and assign owners — I can create them if you want.
+- Add a `/.env.example` and a small pre-commit hook to block secrets.
+
+---
+
+## Contacts & Roles
+
+Add team member names, GitHub handles, and roles here (example):
+- Alice — Product & Demo
+- Bob — Frontend
+- Carol — Backend / Integrations
+- Dan — AI / Prompts
+
+---
+
+## Final notes
+
+This README is optimized for Snow Fest clarity and a demo-first submission. I can add the slide deck, open issues with owners, or set up a Vercel preview deployment — which should I do next?
+
+---
+
+License: MIT
